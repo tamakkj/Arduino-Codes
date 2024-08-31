@@ -1,0 +1,12 @@
+const int ledPin = 13; // Determina o pino do LED no Arduino
+
+void setup() {
+  pinMode(ledPin, OUTPUT); // Configura o pino do LED como saída
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH); // Acende o LED
+  delay(1000);
+  digitalWrite(ledPin, LOW); // Desliga o LED
+  delay(1000);
+}
