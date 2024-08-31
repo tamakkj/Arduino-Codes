@@ -1,0 +1,17 @@
+const int ledCount = 3; // Número de LEDs
+const int ledPins[ledCount] = {11, 12, 13}; // Atribui os pinos aos LEDs
+
+void setup() {
+  for (int i = 0; i < ledCount; i++) {
+    pinMode(ledPins[i], OUTPUT); // Configura os pinos dos LEDs como saída
+  }
+}
+
+void loop() {
+  for (int i = 0; i < ledCount; i++) { // Inicialização, condição e incremento
+    digitalWrite(ledPins[i], HIGH); // Liga o LED
+    delay(500);
+    digitalWrite(ledPins[i], LOW); // Desliga o LED
+    delay(500);
+  }
+}
