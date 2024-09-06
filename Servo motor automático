@@ -1,0 +1,18 @@
+#include <Servo.h>
+#define servoPin 9  // Pino do servo motor
+
+Servo myServo;
+
+void setup() {
+  myServo.attach(servoPin); // Define o pino do servo motor
+}
+
+void loop() {
+  for (int pos = 0; pos <= 180; pos += 1) { // Vai de 0 a 180 graus
+    myServo.write(pos);
+    delay(15);
+  }
+  for (int pos = 180; pos >= 0; pos -= 1) { // Vai de 180 a 0 graus
+    myServo.write(pos);
+  }
+}
