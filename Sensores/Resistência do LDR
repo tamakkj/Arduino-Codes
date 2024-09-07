@@ -1,0 +1,12 @@
+#define ldrPin A0  // Pino do LDR
+
+void setup() {
+  Serial.begin(9600);  // Inicia a comunicação serial
+}
+
+void loop() {
+  int ldrValue = analogRead(ldrPin); // Lê o valor do LDR
+  Serial.print("Resistência do LDR: ");
+  Serial.println(ldrValue);
+  delay(500); // Aguarda 0.5 segundos
+}
